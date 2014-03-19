@@ -18,16 +18,16 @@ cat <<EOF
 EOF
 
 [ -n "$FORM_PROFILE" ] && {
-	echo '<h1>thank you, the device is restarting now and ready to use</h1>'
-	echo "<h3>please apply a sticker with the number $FORM_NODENUMBER to your device.</h3>"
-	echo "<h3>the new IP-adress of your device is '$( _ipsystem do "$FORM_NODENUMBER" | grep ^LANADR | cut -d'=' -f2 )'."
+	echo '<h1>Thank you, the device is restarting now and ready to use</h1>'
+	echo "<h3>Please apply a sticker with the number $FORM_NODENUMBER to your device.</h3>"
+	echo "<h3>The new IP-Adress of your device is '$( _ipsystem do "$FORM_NODENUMBER" | grep ^LANADR | cut -d'=' -f2 )'."
 
 	echo '</body></html>'
 	exit 0
 }
 
 cat <<EOF
-<h3>please configure your mesh-network-device</h3>
+<h3>Please configure your mesh-network-device</h3>
 
 <table cellspacing='0' cellpadding='0' border='1'>
 
@@ -60,13 +60,13 @@ Location of this router<br>(this is for future maintanence <br>purposes and will
 </td></tr>
 
 <tr><td>
-give your device a unique number in<br> your network, e.g. 168
+Please give your device a unique number in<br> your network, e.g. 168
 </td><td>
 <input type='text' size='4' name='FORM_NODENUMBER'>
 </td></tr>
 
 <tr><td>
-direct Internet-connection via WAN-Port?
+Direct Internet-connection via WAN-Port?
 </td><td>
 <input type='checkbox' name='FORM_INETOFFER' value='dhcp'>
 </td></tr>
